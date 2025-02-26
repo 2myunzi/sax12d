@@ -1,3 +1,5 @@
+# 24시간 미적용
+
 import discord
 import os 
 import google.generativeai as genai 
