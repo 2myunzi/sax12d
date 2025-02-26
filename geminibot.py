@@ -14,13 +14,13 @@ client = discord.Client(intents=intents)
 
 # 대화 히스토리 파일 경로
 HISTORY_FILE = "conversation_history.json"
-
+# 불러오기
 def load_history():
     if os.path.exists(HISTORY_FILE):
         with open(HISTORY_FILE, "r", encoding="utf-8") as file:
             return json.load(file)
     return []
-
+# 저장
 def save_history(history):
     with open(HISTORY_FILE, "w", encoding="utf-8") as file:
         json.dump(history, file, ensure_ascii=False, indent=4)
